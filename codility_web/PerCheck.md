@@ -46,7 +46,8 @@ Solution Program
 // you can write to stdout for debugging purposes, e.g.
 // printf("this is a debug message\n");
 
-int solution(int A[], int N) {
+int solution(int A[], int N) 
+{
     // write your code in C99
     if(N<0)
        return 0;
