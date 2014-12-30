@@ -42,28 +42,28 @@ Elements of input arrays can be modified.
 
 
 Solution Program
-<pre><code>
-// you can write to stdout for debugging purposes, e.g.
-// printf("this is a debug message\n");
 
-int solution(int A[], int N) 
-{
-    // write your code in C99
-    if(N<0)
-       return 0;
-    char B[N];
-    for(int i = 0; i < N; i++) B[i] = 0;
-    for(int j = 0; j < N; j++)
+    // you can write to stdout for debugging purposes, e.g.
+    // printf("this is a debug message\n");
+
+    int solution(int A[], int N) 
     {
-        if(A[j] > N)
-           continue;
-        B[A[j] -1] = 1;    
-    }
-    for(int k= 0; k < N; k++)
-    {
-        if(B[k]==0)
+        // write your code in C99
+        if(N<0)
            return 0;
-    }
-    return 1;
-}
-</code></pre>
+        char B[N];
+        for(int i = 0; i < N; i++) B[i] = 0;
+        for(int j = 0; j < N; j++)
+        {
+           if(A[j] > N)
+                continue;
+           B[A[j] -1] = 1;    
+        }
+        
+        for(int k= 0; k < N; k++)
+        {
+           if(B[k]==0)
+               return 0;
+        }
+        return 1;
+     }
